@@ -195,7 +195,6 @@
                     <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
                 </div>
                 <div class="button-group">
-                    <button type="button" class="btn primary" onclick="sendWhatsApp()">Send Message</button>
                     <button type="submit" class="btn outline">Send Email</button>
                 </div>
             </form>
@@ -234,19 +233,12 @@
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
-
-            const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-            const phone = "9779814193208"; // ← Replace with your number
-            const link = `https://wa.me/${phone}?text=${text}`;
-
             window.open(link, "_blank");
         }
 
         function handleFormSubmit(event) {
             event.preventDefault();
             const form = event.target;
-
-            // Replace this with your FormSubmit endpoint
             const formAction = "https://formsubmit.co/bibekbaniya32@gmail.com";
 
             const formData = new FormData(form);
